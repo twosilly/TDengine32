@@ -313,7 +313,12 @@ static unsigned LZ4_NbCommonBytes (register reg_t val)
         if (sizeof(val)==8) {
 #       if defined(_MSC_VER) && defined(_WIN64) && !defined(LZ4_FORCE_SW_BITCOUNT)
             uint64_t r = 0;
-            _BitScanForward64( &r, (U64)val );
+            
+            # if defined(_WIN64)
+                _BitScanForward64( &r, (U64)val );
+            #else
+                _BitScanForward( &r, (U64)val );
+            # endif
             return (int)(r>>3);
 #       elif (defined(__clang__) || (defined(__GNUC__) && (__GNUC__>=3))) && !defined(LZ4_FORCE_SW_BITCOUNT)
             return (__builtin_ctzll((U64)val) >> 3);
@@ -337,7 +342,12 @@ static unsigned LZ4_NbCommonBytes (register reg_t val)
         if (sizeof(val)==8) {
 #       if defined(_MSC_VER) && defined(_WIN64) && !defined(LZ4_FORCE_SW_BITCOUNT)
             uint64_t r = 0;
-            _BitScanReverse64( &r, val );
+            //_BitScanReverse64( &r, val );
+            # if defined(_WIN64)
+                _BitScanReverse64(&r, val);
+            #else
+                _BitScanReverse(&r, val);
+            # endif
             return (unsigned)(r>>3);
 #       elif (defined(__clang__) || (defined(__GNUC__) && (__GNUC__>=3))) && !defined(LZ4_FORCE_SW_BITCOUNT)
             return (__builtin_clzll((U64)val) >> 3);

@@ -1175,7 +1175,12 @@ void tscRetrieveFromVnodeCallBack(void *param, TAOS_RES *tres, int numOfRows) {
 
   if (numOfRows > 0) {
     assert(pRes->numOfRows == numOfRows);
-    atomic_add_fetch_64(&pState->numOfRetrievedRows, numOfRows);
+    # if defined(_WIN64)
+      atomic_add_fetch_64(&pState->numOfRetrievedRows, numOfRows);
+    #else
+      atomic_add_fetch_32(&pState->numOfRetrievedRows, numOfRows);
+    # endif
+    //atomic_add_fetch_64(&pState->numOfRetrievedRows, numOfRows);
 
     tscTrace("%p sub:%p retrieve numOfRows:%d totalNumOfRows:%d from ip:%u,vid:%d,orderOfSub:%d", pPObj, pSql,
              pRes->numOfRows, pState->numOfRetrievedRows, pSvd->ip, pSvd->vnode, idx);

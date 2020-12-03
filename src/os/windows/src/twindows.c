@@ -91,9 +91,14 @@ long interlocked_add_fetch_32(long volatile* ptr, long val) {
   return _InterlockedExchangeAdd(ptr, val) + val;
 }
 
+# if defined(_WIN64)
+
 __int64 interlocked_add_fetch_64(__int64 volatile* ptr, __int64 val) {
   return _InterlockedExchangeAdd64(ptr, val) + val;
 }
+
+#endif 
+
 
 // and
 #ifndef _TD_GO_DLL_
@@ -378,7 +383,12 @@ int fsendfile(FILE* out_file, FILE* in_file, int64_t* offset, int32_t count) {
 
 int32_t BUILDIN_CLZL(uint64_t val) {
   unsigned long r = 0;
-  _BitScanReverse64(&r, val);
+  //_BitScanReverse64(&r, val);
+  # if defined(_WIN64)
+    _BitScanReverse64(&r, val);
+  #else
+    _BitScanReverse(&r, val);
+  # endif
   return (int)(r >> 3);
 }
 
@@ -390,7 +400,12 @@ int32_t BUILDIN_CLZ(uint32_t val) {
 
 int32_t BUILDIN_CTZL(uint64_t val) {
   unsigned long r = 0;
+  # if defined(_WIN64)
   _BitScanForward64(&r, val);
+  #else
+  _BitScanForward(&r, val);
+  # endif
+ 
   return (int)(r >> 3);
 }
 

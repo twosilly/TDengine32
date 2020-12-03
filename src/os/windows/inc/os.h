@@ -158,12 +158,17 @@ extern "C" {
 char    interlocked_add_fetch_8(char volatile *ptr, char val);
 short   interlocked_add_fetch_16(short volatile *ptr, short val);
 long    interlocked_add_fetch_32(long volatile *ptr, long val);
+
+# if defined(_WIN64)
 __int64 interlocked_add_fetch_64(__int64 volatile *ptr, __int64 val);
+#endif
 
 #define atomic_add_fetch_8(ptr, val) interlocked_add_fetch_8((char volatile*)(ptr), (char)(val))
 #define atomic_add_fetch_16(ptr, val) interlocked_add_fetch_16((short volatile*)(ptr), (short)(val))
 #define atomic_add_fetch_32(ptr, val) interlocked_add_fetch_32((long volatile*)(ptr), (long)(val))
+#ifdef _WIN64
 #define atomic_add_fetch_64(ptr, val) interlocked_add_fetch_64((__int64 volatile*)(ptr), (__int64)(val))
+#endif
 #ifdef _WIN64
   #define atomic_add_fetch_ptr atomic_add_fetch_64
 #else
@@ -188,7 +193,10 @@ __int64 interlocked_add_fetch_64(__int64 volatile *ptr, __int64 val);
 #define atomic_sub_fetch_8(ptr, val) interlocked_add_fetch_8((char volatile*)(ptr), -(char)(val))
 #define atomic_sub_fetch_16(ptr, val) interlocked_add_fetch_16((short volatile*)(ptr), -(short)(val))
 #define atomic_sub_fetch_32(ptr, val) interlocked_add_fetch_32((long volatile*)(ptr), -(long)(val))
-#define atomic_sub_fetch_64(ptr, val) interlocked_add_fetch_64((__int64 volatile*)(ptr), -(__int64)(val))
+#ifdef _WIN64
+#define atomic_add_fetch_64(ptr, val) interlocked_add_fetch_64((__int64 volatile*)(ptr), (__int64)(val))
+#endif
+//#define atomic_sub_fetch_64(ptr, val) interlocked_add_fetch_64((__int64 volatile*)(ptr), -(__int64)(val))
 #ifdef _WIN64
   #define atomic_sub_fetch_ptr atomic_sub_fetch_64
 #else

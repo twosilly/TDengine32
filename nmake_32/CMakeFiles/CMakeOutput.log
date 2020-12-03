@@ -1,0 +1,97 @@
+The system is: Windows - 10.0.17763 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Tools/MSVC/14.16.27023/bin/Hostx64/x86/cl.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.16.27038 版
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+CMakeCCompilerId.c
+Microsoft (R) Incremental Linker Version 14.16.27038.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:CMakeCCompilerId.exe 
+CMakeCCompilerId.obj 
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+
+The C compiler identification is MSVC, found in "F:/Money/TDengine/nmake_32/CMakeFiles/3.16.5/CompilerIdC/CMakeCCompilerId.exe"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Tools/MSVC/14.16.27023/bin/Hostx64/x86/cl.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.16.27038 版
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+CMakeCXXCompilerId.cpp
+Microsoft (R) Incremental Linker Version 14.16.27038.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:CMakeCXXCompilerId.exe 
+CMakeCXXCompilerId.obj 
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.exe"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+
+The CXX compiler identification is MSVC, found in "F:/Money/TDengine/nmake_32/CMakeFiles/3.16.5/CompilerIdCXX/CMakeCXXCompilerId.exe"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: F:/Money/TDengine/nmake_32/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake /nologo cmTC_85597\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.16.27023\bin\HostX64\x64\nmake.exe" -f CMakeFiles\cmTC_85597.dir\build.make /nologo -L                  CMakeFiles\cmTC_85597.dir\build
+Building C object CMakeFiles/cmTC_85597.dir/testCCompiler.c.obj
+	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx64\x86\cl.exe @C:\Users\twosi\AppData\Local\Temp\nm62FA.tmp
+testCCompiler.c
+Linking C executable cmTC_85597.exe
+	D:\app\CMake\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_85597.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx64\x86\link.exe /nologo @CMakeFiles\cmTC_85597.dir\objects1.rsp @C:\Users\twosi\AppData\Local\Temp\nm6462.tmp
+
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: F:/Money/TDengine/nmake_32/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake /nologo cmTC_2444b\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.16.27023\bin\HostX64\x64\nmake.exe" -f CMakeFiles\cmTC_2444b.dir\build.make /nologo -L                  CMakeFiles\cmTC_2444b.dir\build
+Building C object CMakeFiles/cmTC_2444b.dir/CMakeCCompilerABI.c.obj
+	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx64\x86\cl.exe @C:\Users\twosi\AppData\Local\Temp\nm68E5.tmp
+CMakeCCompilerABI.c
+Linking C executable cmTC_2444b.exe
+	D:\app\CMake\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_2444b.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx64\x86\link.exe /nologo @CMakeFiles\cmTC_2444b.dir\objects1.rsp @C:\Users\twosi\AppData\Local\Temp\nm6973.tmp
+
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: F:/Money/TDengine/nmake_32/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake /nologo cmTC_f26ba\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.16.27023\bin\HostX64\x64\nmake.exe" -f CMakeFiles\cmTC_f26ba.dir\build.make /nologo -L                  CMakeFiles\cmTC_f26ba.dir\build
+Building CXX object CMakeFiles/cmTC_f26ba.dir/testCXXCompiler.cxx.obj
+	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx64\x86\cl.exe @C:\Users\twosi\AppData\Local\Temp\nm6CAE.tmp
+testCXXCompiler.cxx
+Linking CXX executable cmTC_f26ba.exe
+	D:\app\CMake\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_f26ba.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx64\x86\link.exe /nologo @CMakeFiles\cmTC_f26ba.dir\objects1.rsp @C:\Users\twosi\AppData\Local\Temp\nm6D1C.tmp
+
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: F:/Money/TDengine/nmake_32/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake /nologo cmTC_c9cb0\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.16.27023\bin\HostX64\x64\nmake.exe" -f CMakeFiles\cmTC_c9cb0.dir\build.make /nologo -L                  CMakeFiles\cmTC_c9cb0.dir\build
+Building CXX object CMakeFiles/cmTC_c9cb0.dir/CMakeCXXCompilerABI.cpp.obj
+	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx64\x86\cl.exe @C:\Users\twosi\AppData\Local\Temp\nm7103.tmp
+CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_c9cb0.exe
+	D:\app\CMake\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_c9cb0.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx64\x86\link.exe /nologo @CMakeFiles\cmTC_c9cb0.dir\objects1.rsp @C:\Users\twosi\AppData\Local\Temp\nm7172.tmp
+
+
+
